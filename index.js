@@ -15,7 +15,7 @@ var socket = require('socket.io');
 //   db.close();
 // });
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -41,6 +41,5 @@ io.on('connection', function(socket){
   socket.on('tba', function(data){
     io.sockets.emit('tba', data);
   })
-
 
 });
