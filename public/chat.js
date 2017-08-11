@@ -19,6 +19,8 @@ $(document).keypress(function(e) {
     message.value = "";
   };
 
+    $('#doc-title').css('text-align', 'center');
+
   setTimeout(function(){
     anchor.scrollIntoView();
   }, 1000);

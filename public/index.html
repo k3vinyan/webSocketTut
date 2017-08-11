@@ -14,11 +14,17 @@
   <div id="container">
 
     <div id="excel-container">
-      <div id="excel">
-        <a href="https://docs.google.com/spreadsheets/d/1HzCH7VzzCe9ERJJ2d9YCRqIafJPWIkdLf1oAbx7c2LQ/edit?usp=sharing">
-          <p>excel</p>
-        </a>
+      <div id="excel-wrapper">
+          <iframe
+            style="width: 122px; height: 66vh;"
+            src="https://docs.google.com/spreadsheets/d/1IwvVtLS08MZzEbWLrV_Acwmt186WYwc2tY78dLhdQA4/pubhtml?widget=true&amp;headers=false"></iframe>
+        <div>
+          <button id="excel-button" onclick="window.open('https://docs.google.com/spreadsheets/d/1IwvVtLS08MZzEbWLrV_Acwmt186WYwc2tY78dLhdQA4/edit?usp=sharing')">
+            Edit SpreedSheet
+          </button>
+        </div>
       </div>
+
     </div>
 
     <div id="tba-container">
@@ -29,6 +35,7 @@
         <div id="tba-input">
           <textarea id="tba" type="text" placeholder="Insert TBA(s)" ></textarea>
           <button id="send-tba">Add TBA</button>
+          <button id="clear-tba">Clear</button>
         </div>
       </div>
     </div>

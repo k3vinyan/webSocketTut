@@ -2,18 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var socket = require('socket.io');
-// var MongoClient = require('mongodb').MongoClient;
-//
-// var url = "mongodb://localhost:27017/mydb";
-//
-// MongoClient.connect(url, function(err, db) {
-//   if (err) throw err;
-//   db.createCollection("tbas", function(err, res){
-//     if(err) throw err;
-//   })
-//   console.log("Database created!");
-//   db.close();
-// });
 
 var port = process.env.PORT || 8080;
 
