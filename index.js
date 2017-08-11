@@ -15,7 +15,7 @@ var socket = require('socket.io');
 //   db.close();
 // });
 
-var port = "http://enigmatic-beach-76206.herokuapp.com/";
+var port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
