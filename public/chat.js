@@ -1,4 +1,4 @@
-var socket = io.connect('https://enigmatic-beach-76206.herokuapp.com/');
+var socket = io.connect('https://amazon-flex.herokuapp.com/');
 
 var btnTBA       = document.getElementById('send-tba');
 var tbaWindow    = document.getElementById('tba-window');
