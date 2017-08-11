@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080/');
+var socket = io.connect('https://enigmatic-beach-76206.herokuapp.com/');
 
 var btnTBA       = document.getElementById('send-tba');
 var tbaWindow    = document.getElementById('tba-window');
