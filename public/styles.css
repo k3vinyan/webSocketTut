@@ -1,13 +1,15 @@
 body{
     font-family: 'Nunito';
     background-color: #6f777a;
+    font-size: 10px;
 }
 
 h2{
-    font-size: 18px;
+    font-size: 12px;
     padding: 10px 20px;
     color: #575ed8;
 }
+
 
 #container{
    display: flex;
@@ -17,7 +19,7 @@ h2{
 #tba-window{
   position: relative;
   width: 250px;
-  height: 500px;
+  height: 60vh;
   overflow: auto;
   background: #f9f9f9;
 
@@ -29,6 +31,7 @@ h2{
 }
 #chat-container{
   float: right;
+  height: 100vh;
 }
 .tba-insert{
   text-align: center;
@@ -44,14 +47,14 @@ textarea#tba{
   background: #fff;
   border-bottom: 1px solid #eee;
   font-family: Nunito;
-  font-size: 16px;
-  min-height: 75px;
+  font-size: 10px;
+  min-height: 65px;
 }
 
 button#send-tba{
   background: #2F4073;
   color: #fff;
-  font-size: 18px;
+  font-size: 12px;
   border: 0;
   padding: 12px 0;
   width: 100%;
@@ -60,7 +63,7 @@ button#send-tba{
 }
 #chat{
     float: right;
-    min-width: 600px;
+    min-width: 100vh;
     margin: 30px auto;
     border: 1px solid #ddd;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
@@ -76,14 +79,14 @@ button#send-tba{
 }
 
 #chat-window{
-    height: 500px;
+    height: 60vh;
     overflow: auto;
     background: #f9f9f9;
 }
 
 #output p{
-    padding: 14px 0px;
-    margin: 0 20px;
+    padding: 5px 0px;
+    margin: 0 10px;
     border-bottom: 1px solid #e9e9e9;
     color: #555;
 }
@@ -105,7 +108,7 @@ label{
 }
 
 input#message{
-    padding: 10px 20px;
+    padding: 10px 10px;
     box-sizing: border-box;
     background: #eee;
     border: 0;
@@ -114,10 +117,12 @@ input#message{
     background: #fff;
     border-bottom: 1px solid #eee;
     font-family: Nunito;
-    font-size: 16px;
+    font-size: 10px;
 }
 input#handle{
-    padding: 10px 20px;
+    padding: 10px 10px;
+    font-weight: bold;
+    color: #2F4073;
     box-sizing: border-box;
     background: #eee;
     border: 0;
@@ -126,13 +131,13 @@ input#handle{
     background: #fff;
     border-bottom: 1px solid #eee;
     font-family: Nunito;
-    font-size: 16px;
+    font-size: 10px;
 }
 
 button#send{
     background: #2F4073;
     color: #fff;
-    font-size: 18px;
+    font-size: 12px;
     border: 0;
     padding: 12px 0;
     width: 100%;

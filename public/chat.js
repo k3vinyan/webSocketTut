@@ -9,13 +9,30 @@ var handle       = document.getElementById('handle');
 var btnMessage   = document.getElementById('send');
 var output       = document.getElementById('output');
 var feedback     = document.getElementById('feedback');
+var anchor       = document.getElementById('anchor');
+
+
+$(document).keypress(function(e) {
+
+  if(e.which == 13) {
+    btnMessage.click();
+    message.value = "";
+  };
+
+  setTimeout(function(){
+    anchor.scrollIntoView();
+  }, 1000);
+
+});
 
 btnMessage.addEventListener('click', function(){
   socket.emit('chat', {
     message: message.value,
     handle: handle.value
   });
+
 });
+
 
 btnTBA.addEventListener('click', function(){
   tbaArray = [];
@@ -48,6 +65,7 @@ socket.on('chat', function(data){
 })
 
 socket.on('typing', function(data){
+  anchor.scrollIntoView();
   feedback.innerHTML = '<p><em>' + data.handle + ' is typing...</em></p>';
 })
 

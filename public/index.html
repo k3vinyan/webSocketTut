@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js" ></script>
   <link href="./styles.css" rel="stylesheet" />
   <title>Amazon Flex</title>
@@ -11,6 +12,15 @@
 
 
   <div id="container">
+
+    <div id="excel-container">
+      <div id="excel">
+        <a href="https://docs.google.com/spreadsheets/d/1HzCH7VzzCe9ERJJ2d9YCRqIafJPWIkdLf1oAbx7c2LQ/edit?usp=sharing">
+          <p>excel</p>
+        </a>
+      </div>
+    </div>
+
     <div id="tba-container">
 
       <div id="chat-tba">
@@ -28,15 +38,18 @@
         <div id="chat-window">
           <div id="output"></div>
           <div id="feedback"></div>
+          <div id="anchor"></div>
         </div>
         <input id="handle" type="text" placeholder="Enter Handler" />
         <input id="message" type="text" placeholder="Enter Message" />
         <button id="send">Send</button>
       </div>
     </div>
+
   </div>
 
 
   <script src="./chat.js" ></script>
+
 </body>
 </html>
