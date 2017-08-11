@@ -1,4 +1,4 @@
-var socket = io.connect('http://enigmatic-beach-76206.herokuapp.com/');
+var socket = io.connect('http://localhost:8080/');
 
 var btnTBA       = document.getElementById('send-tba');
 var tbaWindow    = document.getElementById('tba-window');
@@ -10,6 +10,7 @@ var btnMessage   = document.getElementById('send');
 var output       = document.getElementById('output');
 var feedback     = document.getElementById('feedback');
 var anchor       = document.getElementById('anchor');
+var btnClear     = document.getElementById('clear-button');
 
 
 $(document).keypress(function(e) {
@@ -19,7 +20,6 @@ $(document).keypress(function(e) {
     message.value = "";
   };
 
-    $('#doc-title').css('text-align', 'center');
 
   setTimeout(function(){
     anchor.scrollIntoView();
@@ -35,6 +35,9 @@ btnMessage.addEventListener('click', function(){
 
 });
 
+btnClear.addEventListener('click', function(){
+  socket.emit('clear');
+});
 
 btnTBA.addEventListener('click', function(){
   tbaArray = [];
@@ -58,7 +61,10 @@ message.addEventListener('keypress', function(){
 });
 
 
-
+socket.on('clear', function(){
+  $('#tba-window').empty();
+  console.log('dog');
+})
 
 socket.on('chat', function(data){
   feedback.innerHTML = "";
@@ -71,13 +77,7 @@ socket.on('typing', function(data){
   feedback.innerHTML = '<p><em>' + data.handle + ' is typing...</em></p>';
 })
 
-
-var counter = 0;
-
 socket.on('tba', function(data){
-  counter += 1;
-  console.log(data);
-  //count.innerHTML = "Count: " + counter;
   for(var i = 0; i < data.tba.length; i++){
     tbaWindow.innerHTML += "<div class='tba-insert'>" + data.tba[i] + "</div>";
   }

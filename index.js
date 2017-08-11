@@ -30,4 +30,8 @@ io.on('connection', function(socket){
     io.sockets.emit('tba', data);
   })
 
+  socket.on('clear', function(){
+    io.sockets.emit('clear', null);
+  })
+
 });
