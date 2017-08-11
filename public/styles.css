@@ -13,16 +13,29 @@ h2{
 
 #container{
    display: flex;
-   justify-content: center;
+}
+
+#tba-container{
+  display: flex;
+  float: left;
+}
+
+#tba-wrapper{
+    float: right;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+    border-radius: 2px;
 }
 
 #tba-window{
   position: relative;
-  width: 250px;
-  height: 57vh;
+  width: 150px;
+  height: 60vh;
   overflow: auto;
   background: #f9f9f9;
-
+  font-size: 14px;
+  text-align: center;
 }
 
 #excel-wrapper{
@@ -37,14 +50,14 @@ h2{
  #excel-text{
    text-align: center;
  }
+ .tba-insert{
+   border-bottom: solid;
+   border-color: #40589e;
+ }
 
-#tba-container{
-  display: flex;
-  float: left;
-}
+
 #chat-container{
   float: right;
-  height: 100vh;
 }
 
 button#excel-button{
@@ -68,7 +81,6 @@ textarea#tba{
   border-bottom: 1px solid #eee;
   font-family: Nunito;
   font-size: 10px;
-  min-height: 65px;
 }
 
 button#send-tba{
@@ -88,14 +100,7 @@ button#send-tba{
     box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
     border-radius: 2px;
 }
-#chat-tba{
-    float: right;
-    min-width: 225px;
-    margin: 30px auto;
-    border: 1px solid #ddd;
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
-    border-radius: 2px;
-}
+
 
 #chat-window{
     height: 60vh;
