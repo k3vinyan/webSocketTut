@@ -15,11 +15,14 @@ var socket = require('socket.io');
 //   db.close();
 // });
 
+var port = provess.env.PORT || 8080;
+
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 
-var server = app.listen(8080, function(){
-  console.log("server is running on port 8080");
+var server = app.listen(port, function(){
+  console.log("server is running port " + port);
 });
 
 var io = socket(server);
