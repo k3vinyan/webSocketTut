@@ -1,9 +1,11 @@
-var socket = io.connect('https://amazon-flex.herokuapp.com/');
+//var socket = io.connect('https://amazon-flex.herokuapp.com/');
+import 'jquery.titleAlert.min';
+
+var socket = io.connect('http://localhost:8080/');
 
 var btnTBA       = document.getElementById('send-tba');
 var tbaWindow    = document.getElementById('tba-window');
 var count        = document.getElementById('count');
-
 var message      = document.getElementById('message');
 var handle       = document.getElementById('handle');
 var btnMessage   = document.getElementById('send');
@@ -12,6 +14,12 @@ var feedback     = document.getElementById('feedback');
 var anchor       = document.getElementById('anchor');
 var btnClear     = document.getElementById('clear-button');
 
+
+var accept = new Audio();
+var buzzer = new Audio();
+
+accept.src = "https://drive.google.com/uc?export=download&id=0B93xTaskz1_WMVhGcGJDR29xR0E";
+buzzer.src = "https://drive.google.com/uc?export=download&id=0B93xTaskz1_WZ3l3V2NJeDdWMDg";
 
 $(document).keypress(function(e) {
 
@@ -70,6 +78,8 @@ socket.on('chat', function(data){
   feedback.innerHTML = "";
   output.innerHTML += '<p><strong>' + data.handle + ": </strong>" + data.message
     + "</p>";
+    accept.play();
+    $.titleAlert("New chat message!");
 })
 
 socket.on('typing', function(data){
