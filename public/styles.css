@@ -175,3 +175,22 @@ button#clear-button{
   width: 100%;
   border-radius: 0 0 2px 2px;
 }
+.quick-listing{
+  font-weight: normal;
+  background-color: #2F4073;
+}
+ul:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:bold;
+    margin-left:-15px;
+}
+.list-container{
+  width: 150px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+}
