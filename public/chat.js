@@ -1,4 +1,5 @@
 var socket = io.connect('https://amazon-flex.herokuapp.com/');
+//var socket = io.connect('http://localhost:8080/');
 
 $.getScript("jquery.titlealert.min.js", function(){
 
@@ -6,7 +7,7 @@ $.getScript("jquery.titlealert.min.js", function(){
 
 
 
-var socket = io.connect('http://localhost:8080/');
+
 
 var btnTBA       = document.getElementById('send-tba');
 var tbaWindow    = document.getElementById('tba-window');
