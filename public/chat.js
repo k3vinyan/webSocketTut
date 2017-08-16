@@ -1,5 +1,10 @@
 //var socket = io.connect('https://amazon-flex.herokuapp.com/');
-import 'jquery.titleAlert.min';
+
+$.getScript("jquery.titlealert.min.js", function(){
+
+});
+
+
 
 var socket = io.connect('http://localhost:8080/');
 
@@ -18,7 +23,7 @@ var btnClear     = document.getElementById('clear-button');
 var accept = new Audio();
 var buzzer = new Audio();
 
-accept.src = "https://drive.google.com/uc?export=download&id=0B93xTaskz1_WMVhGcGJDR29xR0E";
+accept.src = "https://drive.google.com/uc?export=download&id=0B93xTaskz1_WaE5GaXdScHNkRlk";
 buzzer.src = "https://drive.google.com/uc?export=download&id=0B93xTaskz1_WZ3l3V2NJeDdWMDg";
 
 $(document).keypress(function(e) {
@@ -71,7 +76,7 @@ message.addEventListener('keypress', function(){
 
 socket.on('clear', function(){
   $('#tba-window').empty();
-  console.log('dog');
+
 })
 
 socket.on('chat', function(data){
@@ -79,7 +84,12 @@ socket.on('chat', function(data){
   output.innerHTML += '<p><strong>' + data.handle + ": </strong>" + data.message
     + "</p>";
     accept.play();
-    $.titleAlert("New chat message!");
+    $.titleAlert(data.handle + ": " + data.message, {
+        requireBlur:true,
+        stopOnFocus:true,
+        duration:10000,
+        interval:500
+    });
 })
 
 socket.on('typing', function(data){
