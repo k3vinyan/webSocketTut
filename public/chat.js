@@ -1,4 +1,4 @@
-//var socket = io.connect('https://amazon-flex.herokuapp.com/');
+var socket = io.connect('https://amazon-flex.herokuapp.com/');
 
 $.getScript("jquery.titlealert.min.js", function(){
 
